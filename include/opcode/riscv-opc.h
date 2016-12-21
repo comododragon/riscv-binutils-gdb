@@ -700,6 +700,45 @@
 #define CAUSE_SUPERVISOR_ECALL 0x9
 #define CAUSE_HYPERVISOR_ECALL 0xa
 #define CAUSE_MACHINE_ECALL 0xb
+/* Xvec Instructions */
+#define MATCH_ADDV 0x2B
+#define MASK_ADDV  0xfe00707f
+#define MATCH_ADDIV 0x0B
+#define MASK_ADDIV  0x707f
+#define MATCH_SUBV 0x4000002B
+#define MASK_SUBV  0xfe00707f
+#define MATCH_SLLV 0x102B
+#define MASK_SLLV  0xfe00707f
+#define MATCH_SLLIV 0x100B
+#define MASK_SLLIV  0xfc00707f
+#define MATCH_SLTV 0x202B
+#define MASK_SLTV  0xfe00707f
+#define MATCH_SLTIV 0x200B
+#define MASK_SLTIV  0x707f
+#define MATCH_SLTUV 0x302B
+#define MASK_SLTUV  0xfe00707f
+#define MATCH_SLTIUV 0x302B
+#define MASK_SLTIUV  0x707f
+#define MATCH_XORV 0x402B
+#define MASK_XORV  0xfe00707f
+#define MATCH_XORIV 0x400B
+#define MASK_XORIV 0x707f
+#define MATCH_SRLV 0x502B
+#define MASK_SRLV  0xfe00707f
+#define MATCH_SRLIV 0x500B
+#define MASK_SRLIV  0xfc00707f
+#define MATCH_SRAV 0x4000502B
+#define MASK_SRAV  0xfe00707f
+#define MATCH_SRAIV 0x4000500B
+#define MASK_SRAIV  0xfc00707f
+#define MATCH_ORV 0x602B
+#define MASK_ORV  0xfe00707f
+#define MATCH_ORIV 0x600B
+#define MASK_ORIV  0x707f
+#define MATCH_ANDV 0x702B
+#define MASK_ANDV  0xfe00707f
+#define MATCH_ANDIV 0x700B
+#define MASK_ANDIV  0x707f
 #endif
 #ifdef DECLARE_INSN
 DECLARE_INSN(slli_rv32, MATCH_SLLI_RV32, MASK_SLLI_RV32)

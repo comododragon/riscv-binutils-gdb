@@ -614,6 +614,37 @@ const struct riscv_opcode riscv_opcodes[] =
 {"sfence.vm", "I",   "s",    MATCH_SFENCE_VM, MASK_SFENCE_VM, match_opcode, 0 },
 {"wfi",       "I",   "",     MATCH_WFI, MASK_WFI, match_opcode, 0 },
 
+/* Xvec Instructions */
+{"addv",       "I",   "d,s,t",  MATCH_ADDV, MASK_ADDV, match_opcode, 0 },
+{"addv",       "I",   "d,s,t,0",MATCH_ADDV, MASK_ADDV, match_opcode, 0 },
+{"addv",       "I",   "d,s,j",  MATCH_ADDIV, MASK_ADDIV, match_opcode, INSN_ALIAS },
+{"subv",       "I",   "d,s,t",  MATCH_SUBV, MASK_SUBV, match_opcode, 0 },
+{"sllv",       "I",   "d,s,t",   MATCH_SLLV, MASK_SLLV, match_opcode, 0 },
+{"sllv",       "I",   "d,s,>",   MATCH_SLLIV, MASK_SLLIV, match_opcode, INSN_ALIAS },
+{"sltv",       "I",   "d,s,t",  MATCH_SLTV, MASK_SLTV, match_opcode, 0 },
+{"sltv",       "I",   "d,s,j",  MATCH_SLTIV, MASK_SLTIV, match_opcode, 0 },
+{"sltuv",      "I",   "d,s,t",  MATCH_SLTUV, MASK_SLTUV, match_opcode, 0 },
+{"sltuv",      "I",   "d,s,j",  MATCH_SLTIUV, MASK_SLTIUV, match_opcode, INSN_ALIAS },
+{"xorv",       "I",   "d,s,t",  MATCH_XORV, MASK_XORV, match_opcode, 0 },
+{"xorv",       "I",   "d,s,j",  MATCH_XORIV, MASK_XORIV, match_opcode, INSN_ALIAS },
+{"srlv",       "I",   "d,s,t",   MATCH_SRLV, MASK_SRLV, match_opcode, 0 },
+{"srlv",       "I",   "d,s,>",   MATCH_SRLIV, MASK_SRLIV, match_opcode, INSN_ALIAS },
+{"srav",       "I",   "d,s,t",   MATCH_SRAV, MASK_SRAV, match_opcode, 0 },
+{"srav",       "I",   "d,s,>",   MATCH_SRAIV, MASK_SRAIV, match_opcode, INSN_ALIAS },
+{"orv",        "I",   "d,s,t",  MATCH_ORV, MASK_ORV, match_opcode, 0 },
+{"orv",        "I",   "d,s,j",  MATCH_ORIV, MASK_ORIV, match_opcode, INSN_ALIAS },
+{"andv",       "I",   "d,s,t",  MATCH_ANDV, MASK_ANDV, match_opcode, 0 },
+{"andv",       "I",   "d,s,j",  MATCH_ANDIV, MASK_ANDIV, match_opcode, INSN_ALIAS },
+{"addiv",      "I",   "d,s,j",  MATCH_ADDIV, MASK_ADDIV, match_opcode, 0 },
+{"sltiv",      "I",   "d,s,j",  MATCH_SLTIV, MASK_SLTIV, match_opcode, INSN_ALIAS },
+{"sltiuv",     "I",   "d,s,j",  MATCH_SLTIUV, MASK_SLTIUV, match_opcode, 0 },
+{"xoriv",      "I",   "d,s,j",  MATCH_XORIV, MASK_XORIV, match_opcode, 0 },
+{"oriv",       "I",   "d,s,j",  MATCH_ORIV, MASK_ORIV, match_opcode, 0 },
+{"andiv",      "I",   "d,s,j",  MATCH_ANDIV, MASK_ANDIV, match_opcode, 0 },
+{"slliv",      "I",   "d,s,>",   MATCH_SLLIV, MASK_SLLIV, match_opcode, 0 },
+{"srliv",      "I",   "d,s,>",   MATCH_SRLIV, MASK_SRLIV, match_opcode, 0 },
+{"sraiv",      "I",   "d,s,>",   MATCH_SRAIV, MASK_SRAIV, match_opcode, 0 },
+
 /* Terminate the list.  */
 {0, 0, 0, 0, 0, 0, 0}
 };
